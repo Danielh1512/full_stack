@@ -1,23 +1,48 @@
-let nome =  prompt("digite o seu nome ");
-let idade = prompt("digite sua idade ");
-let ano_atual = 2025;
-let resp-exl = 'ola'+ nome + ',seu ano de nacimento é'+ ano_nasc +'!';
-let ano_nasc = ano_atual-idade;document.getElementById('exl').innerhtml-ano_nasc
+let canvas =  document.getElementById('canvas');
+let ctx = canvas.getConetext('2d');
 
-function imprimeFrase(){
-    document.getElementById('ex_f').innerhtml = frames;
+// retângulos
+ctx.beginPath();
+ctx.lineWidth = 2;
+ctx.fillStyle = 'blue';
+ctx.strokeStyle = 'red';
+ctx.fillRect(10,10,50,50);
+ctx.strokeRect(0,0,70,70);
+ctx.closePath();
 
-imprimeFrase('ola mundo');
+// linhas
+ctx.beginPath();
+ctx.lineWidth = 2;
+ctx.fillStyle = 'blue';
+ctx.strokeStyle = 'red';
+ctx.moveTo(200,150);
+ctx.lineTo(60,10);
+ctx.lineTo(60,250);
+ctx.lineTo(200,250);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
 
-imprimeFrase('hello world');
+// arcos
+ctx.beginPath();
+ctx.lineWidth = 2;
+ctx.fillStyle = 'blue';
+ctx.strokeStyle = 'red';
+ctx.arc(200,200,50,1.5*Math.PI,2.5*Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
 
-
-
-
-
-
-
-
+// texto
+ctx.beginPath();
+ctx.lineWidth = 2;
+ctx.fillStyle = 'blue';
+ctx.strokeStyle = 'red';
+ctx.font = "90px Arial"
+ctx.textAlign = "center";
+ctx.fillText("Olá",20,20);
+ctx.strokeText("Olá",200,350)
+ctx.closePath();
 
 
 
